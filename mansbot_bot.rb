@@ -20,6 +20,8 @@ Telegram::Bot::Client.run(token) do |bot|
       telegram_send(bot, message, "Жируша! Спорим, 20 раз ты не осилишь!?")
     when '30'
       telegram_send(bot, message, "Ну, 30 раз Жируша точно не смогЁт!)")
+    when /^\d+$/
+      telegram_send(bot, message, "Чет не то ты пишешь -_-")
     end
   end
 end
